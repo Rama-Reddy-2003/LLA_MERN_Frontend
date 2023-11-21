@@ -10,7 +10,7 @@ function Content({ content }){
         <div>
             <div className="row h-100 justify-content-center mt-3">
                     <div className="col-11 col-xl-9">
-                        <div className="example " style={{borderRadius:"25px",backgroundColor:"rgba(220,220,220,0.7)", maxHeight: "90vh", overflowY: "scroll" }}>
+                        <div className="example " style={{borderRadius:"10px",backgroundColor:"rgba(220,220,220,0.627)", maxHeight: "90vh", overflowY: "scroll" }}>
                             
                             <textarea className='example'
                                     value={ content }

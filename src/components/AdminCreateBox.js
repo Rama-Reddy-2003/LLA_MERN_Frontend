@@ -6,7 +6,7 @@ function AdminCreateBox(props) {
     const navigate = useNavigate();
 
     const [name, setName] = useState("");
-    const [image, setImage] = useState("");
+    const [image, setImage] = useState(["",""]);
     const [content, setContent] = useState("");
     const [questions, setQuestions] = useState([
         ["", "", "", "", "", ""],
@@ -62,7 +62,7 @@ function AdminCreateBox(props) {
         props.getState(arr);
     };
     const cardStyle = {
-        backgroundImage: `url(${image})`, 
+        backgroundImage: `url(https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`, 
         backgroundSize: 'cover',
         height:'100vh',
         overflow:"hidden",
@@ -74,12 +74,12 @@ function AdminCreateBox(props) {
              <div className="card" style={cardStyle}>
             <div className="h-100">
                 <div style={{paddingLeft:"5px"}}>
-                <button className='btn btn-primary mt-2 ' onClick={() => { navigate("/AdminHome") }}>Home</button>
+                <button className='btn btn-primary mt-2 ' onClick={() => { navigate("/AdminHome") }} style={{fontFamily: "'Century Gothic', sans-serif", fontWeight: "bold"}}>Home</button>
                 </div>
                 
-                <div className="row h-100 justify-content-center mt-3">
+                <div className="row h-100 justify-content-center mt-3" style={{fontFamily: "'Century Gothic', sans-serif", fontWeight: "bold"}}>
                     <div className="col-11 col-xl-9">
-                        <div className="example " style={{borderRadius:"25px",backgroundColor:"rgba(220,220,220,0.7)", maxHeight: "90vh", overflowY: "scroll" }}>
+                        <div className="example " style={{borderRadius:"10px",backgroundColor:"rgba(220,220,220,0.627)", maxHeight: "90vh", overflowY: "scroll" }}>
                             <div className="mx-3   mb-5">
                                 <h3 className="card-title">Name of the Language</h3>
                                 <input
@@ -90,8 +90,23 @@ function AdminCreateBox(props) {
                                 />
                                 <h5 className="card-title">Image Url</h5>
                                 <input
-                                    value={image}
-                                    onChange={(event) => setImage(event.target.value)}
+                                    value={image[0]}
+                                    onChange={(event) => {
+                                        const newImage = [...image];
+                                        newImage[0] = event.target.value;
+                                        setImage(newImage);
+                                    }}
+                                    type="text"
+                                    style={inputFieldStyle}
+                                />
+                                <h5 className="card-title">Video Url 1</h5>
+                                <input
+                                    value={image[1]}
+                                    onChange={(event) => {
+                                        const newImage = [...image];
+                                        newImage[1] = event.target.value;
+                                        setImage(newImage);
+                                    }}
                                     type="text"
                                     style={inputFieldStyle}
                                 />

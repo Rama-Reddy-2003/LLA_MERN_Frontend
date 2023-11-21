@@ -34,18 +34,18 @@ function AdminHomeSlide() {
     return (
         <div className="my-2 ">
             <div >
-                <div className="row example gx-3 " style={{borderRadius:"25px",backgroundColor:"rgba(220,220,220,0.7)", height: "80vh", overflowY: "scroll" }}>
+                <div className="row example gx-3 " style={{borderRadius:"10px",backgroundColor:"rgba(220,220,220,0.627)", height: "80vh", overflowY: "scroll" }}>
                     {data.map((val) => (
                         <div className="col-md-6 col-lg-6 col-xl-4" key={val._id} style={{ marginBottom: "20px" }}>
-                            <div className="card mt-5" style={{borderRadius:"25px",backgroundColor:"rgba(220,220,220,0.7)", maxHeight: "90vh", overflow: "hidden" }}>
+                            <div className="card mt-5" style={{borderRadius:"12.5px",backgroundColor:"rgba(220,220,220,0.627)", maxHeight: "90vh", overflow: "hidden" }}>
                                 <div className="row justify-content-center">
-                                    <img src={val.image} className="mt-3 card-img-top" alt="Loading" style={{height:"300px"}} />
+                                    <img src={val.image[0]} className="mt-3 card-img-top" alt="Loading" style={{height:"300px"}} />
                                 </div>
 
-                                <div className="card-body">
+                                <div className="card-body" style={{fontFamily: "'Century Gothic', sans-serif", fontWeight: "bold"}}>
                                     <h5 className="card-title">Language Name: {val.name}</h5>
                                 </div>
-                                <div className="card-footer d-flex justify-content-between">
+                                <div className="card-footer d-flex justify-content-between" style={{fontFamily: "'Century Gothic', sans-serif", fontWeight: "bold"}}>
                                     <Link to={`/Editcontent/${val._id}`} className="btn btn-success">
                                         Edit Course
                                     </Link>

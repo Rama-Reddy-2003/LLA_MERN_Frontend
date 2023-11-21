@@ -18,15 +18,15 @@ const UserSubmissions = ({ userId }) => {
 
   return (
     <div>
-      <div className="example " style={{ borderRadius: "25px", backgroundColor: "rgba(220,220,220,0.7)", height: "80vh", overflowY: "scroll" }}>
-        <h2 style={{ textAlign: "center", fontFamily: "Gill Sans Extrabold" }}>Your Submissions</h2>
+      <div className="example " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", height: "80vh", overflowY: "scroll" }}>
+        <h2 style={{ textAlign: "center", fontFamily: "'Century Gothic', sans-serif", fontWeight: "bold"}}>Your Submissions</h2>
         {submissions.length === 0 ? (
-          <h5 style={{ textAlign: "center", fontSize: "1.5rem", marginTop: "2rem" ,fontFamily:"Gill Sans Extrabold"}}>No submissions Yet</h5>
+          <h5 style={{ textAlign: "center", fontSize: "1.5rem", marginTop: "2rem" ,fontFamily: "'Century Gothic', sans-serif", }}>No submissions Yet</h5>
         ) : (
           <div className='d-flex justify-content-center'>
             <div className='col-xl-8 col-lg-10 col-12'>
               <div>
-                <table style={{ width: "100%" }}>
+                <table style={{ width: "100%", fontFamily: "'Century Gothic', sans-serif" }}>
                   <tr>
                     <th>Language Name</th>
                     <th>Submission Date</th>

@@ -9,7 +9,7 @@ function EditContent() {
     console.log(id);
     const [initialValue, setInitialValue] = useState({
         name: "",
-        image: "",
+        image: ["",""],
         content: "",
         quiz: [
             ["", "", "", "", "", ""],

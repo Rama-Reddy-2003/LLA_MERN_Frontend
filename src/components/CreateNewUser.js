@@ -47,23 +47,25 @@ function CreateNewUser() {
     }
 
     return (
-        <div>
+        <div style={{fontFamily: "'Century Gothic', sans-serif",}}>
             <div>
                 <div className="app">
-                    <div className="login-form">
-                    <div className="title">Create new Account</div>
+                    <div className="login-form" style={{fontFamily: "'Century Gothic', sans-serif", padding: "30px 75px", }}>
+                    <div className="title">Create a new account</div>
                     <form onSubmit={handlelogin}>
-                        <p>Name</p>
-                        <input value={name} onChange={(event) => setname(event.target.value)}></input>
-                        <p>Email</p>
-                        <input value={email} type="email" onChange={(event) => setemail(event.target.value)}></input>
-                        <p>Password</p>
-                        <input value={password} onChange={(event) => setPassword(event.target.value)}></input>
+                        <b></b>
+                        <p style={{ margin: 3 }}>Name</p>
+                        <input value={name} onChange={(event) => setname(event.target.value)} style={{ width: 270 }}></input>
+                        <p style={{ margin: 3 }}>Email</p>
+                        <input value={email} type="email" onChange={(event) => setemail(event.target.value)} style={{ width: 270 }}></input>
+                        <p style={{ margin: 3 }}>Password</p>
+                        <input value={password} onChange={(event) => setPassword(event.target.value)} style={{ width: 270 }}></input>
                         <br />
                         <br />
-                        <Link to="/" className="text-primary text-center" style={{textDecoration:"none",textAlign:"center"}}><span>Already Have any Account??</span></Link>
+                        <center><Link to="/" className="text-primary text-center" style={{textDecoration:"none",textAlign:"center"}}><span style={{color: "black"}}>Already have an account???</span></Link></center>
+
                         <div className="text-center">
-                            <button className="btn btn-secondary">Create</button>
+                            <button className="btn btn-info" style={{ marginTop: '7.5px' }}>Create</button>
                         </div>
                     </form>
                     </div>

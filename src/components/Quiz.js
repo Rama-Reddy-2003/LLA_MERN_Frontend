@@ -80,7 +80,7 @@ const Quiz = ({ id, languagename, quizData }) => {
     <div>
       <div className="row h-100 justify-content-center mt-3">
         <div className="col-11 col-xl-9 ">
-          <div className="example " style={{ borderRadius: "25px", backgroundColor: "rgba(220,220,220,0.7)", maxHeight: "75vh", overflowY: "scroll" }}>
+          <div className="example " style={{ borderRadius: "25px", backgroundColor: "rgba(220,220,220,0.627)", maxHeight: "75vh", overflowY: "scroll" }}>
 
             <div>
               <h2 style={{ textAlign: "center" }}>Quiz Questions</h2>
@@ -112,7 +112,7 @@ const Quiz = ({ id, languagename, quizData }) => {
               </div>
               <div className='mb-3' style={{ textAlign: "center" }}>
                 {!score && (
-                  <button onClick={handleSubmit} className="btn btn-primary ">Submit</button>
+                  <button onClick={handleSubmit} className="btn btn-primary " style={{fontFamily: "'Century Gothic', sans-serif",}}>Submit</button>
                 )}
               </div>
               {score !== null && (

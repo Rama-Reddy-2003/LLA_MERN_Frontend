@@ -10,7 +10,7 @@ function UserHome() {
   const [Name,setname]=useState("");
   const mystyle = {
     height: "100vh",
-    backgroundImage: 'url("https://cdn.thecollector.com/wp-content/uploads/2023/09/most-spoken-languages-in-the-world.jpg?width=1400&quality=70")',
+    backgroundImage: 'url("https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
     backgroundSize: 'cover',
     overflow: "hidden",
   };
@@ -35,12 +35,12 @@ function UserHome() {
     <div style={mystyle}>
       <div className="container-lg">
         <div style={{ paddingTop: "0.9vh" }}>
-          <h1 className="text-center " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.7)", padding: "1vh 0vh",fontFamily:"Gill Sans Extrabold" }}>Language Learning App</h1>
-          <p className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.7)", paddingBottom: "2vh", fontWeight: "bold",marginRight: "2vw", fontFamily:"cursive"}}><i class="bi bi-person-circle"></i> {Name}</p>
-          <button onClick={() => handlePageChange("home")} className="btn btn-md h3 " style={{marginRight: "2vw", borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.7)", paddingBottom: "2vh", fontWeight: "bold" }}>Home</button>
-          <button onClick={() => handlePageChange("submissions")} className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.7)", paddingBottom: "2vh", fontWeight: "bold" }}>Submissions</button>
+        <h1 className="text-center" style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", padding: "1vh 0vh", fontFamily: "'Century Gothic', sans-serif", fontWeight: "bold"}}>Language  Learning  App</h1>
+          <p className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold",marginRight: "2vw", fontFamily: "'Century Gothic', sans-serif"}}><i class="bi bi-person-circle"></i>&ensp;Hello {Name}</p>
+          <button onClick={() => handlePageChange("home")} className="btn btn-md h3 " style={{marginRight: "2vw", borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold", fontFamily: "'Century Gothic', sans-serif" }}>Home</button>
+          <button onClick={() => handlePageChange("submissions")} className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold", fontFamily: "'Century Gothic', sans-serif" }}>Submissions</button>
           <div style={{ textAlign: "end", marginTop: "-55px" }}>
-            <button onClick={() => { window.location = window.location.origin }} className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.7)", paddingBottom: "2vh", fontWeight: "bold" }}> <i class="bi bi-box-arrow-in-left"></i></button>
+            <button onClick={() => { window.location = window.location.origin }} className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold", fontFamily: "'Century Gothic', sans-serif" }}>Log out&ensp; <i class="bi bi-box-arrow-in-left"></i></button>
           </div>
           {currentPage === "home" && <UserHomeSlides />}
           {currentPage === "submissions" && <UserSubmissions userId={id} />}

@@ -5,7 +5,7 @@ function AdminHome(){
     const navigate=useNavigate();
     const mystyle = {
         height: "100vh",
-        backgroundImage: 'url("https://cdn.thecollector.com/wp-content/uploads/2023/09/most-spoken-languages-in-the-world.jpg?width=1400&quality=70")',
+        backgroundImage: 'url("https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
         backgroundSize: 'cover',
         overflow:"hidden"
     };
@@ -14,10 +14,10 @@ function AdminHome(){
         <div style={mystyle}>
             <div className="container-lg" >
                 <div style={{paddingTop:"0.9vh"}}>
-                <h1 className="text-center " style={{borderRadius:"15px",backgroundColor:"rgba(220,220,220,0.7)",padding:"1vh 0vh",}}>Language Learning App</h1>
-                <button onClick={()=>{navigate('/AddContent')}} className="btn btn-md h3 " style={{borderRadius:"15px",backgroundColor:"rgba(220,220,220,0.7)",paddingBottom:"2vh",fontWeight:"bold"}}>Add New Language</button>
+                <h1 className="text-center " style={{borderRadius:"15px",backgroundColor:"rgba(220,220,220,0.627)",padding:"1vh 0vh", fontFamily: "'Century Gothic', sans-serif", fontWeight: "bolder"}}>Language Learning App</h1>
+                <button onClick={()=>{navigate('/AddContent')}} className="btn btn-md h3 " style={{borderRadius:"15px",backgroundColor:"rgba(220,220,220,0.627)",paddingBottom:"2vh",fontWeight:"bold", fontFamily: "'Century Gothic', sans-serif",}}>Add New Language</button>
                 <div style={{ textAlign:"end",marginTop:"-55px"}}>
-                <button onClick={()=>{navigate('/')}} className="btn btn-md h3 " style={{borderRadius:"15px",backgroundColor:"rgba(220,220,220,0.7)",paddingBottom:"2vh",fontWeight:"bold"}}>Log out</button>
+                <button onClick={()=>{navigate('/')}} className="btn btn-md h3 " style={{borderRadius:"15px",backgroundColor:"rgba(220,220,220,0.627)",paddingBottom:"2vh",fontWeight:"bold", fontFamily: "'Century Gothic', sans-serif",}}>Log out</button>
                 </div>
                 
                 <div>

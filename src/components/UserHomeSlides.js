@@ -28,8 +28,8 @@ function UserHomeSlides() {
         <div
           className="row example gx-3 "
           style={{
-            borderRadius: "25px",
-            backgroundColor: "rgba(220,220,220,0.7)",
+            borderRadius: "15px",
+            backgroundColor: "rgba(220,220,220,0.627)",
             height: "80vh",
             overflowY: "scroll",
           }}
@@ -43,26 +43,26 @@ function UserHomeSlides() {
               <div
                 className="card mt-5"
                 style={{
-                  borderRadius: "25px",
-                  backgroundColor: "rgba(220,220,220,0.7)",
+                  borderRadius: "15px",
+                  backgroundColor: "rgba(220,220,220,0.627)",
                   maxHeight: "90vh",
                   overflow: "hidden",
                 }}
               >
                 <div className="row justify-content-center">
                   <img
-                    src={val.image}
+                    src={val.image[0]}
                     className="mt-3 card-img-top"
                     alt="Loading"
-                    style={{ height: "300px" }}
+                    style={{ height: "200px" }}
                   />
                 </div>
 
                 <div className="card-body">
-                  <h5 className="card-title">Language Name: {val.name}</h5>
+                  <h5 className="card-title" style={{fontFamily: "'Century Gothic', sans-serif", }}>Language Name: {val.name}</h5>
                 </div>
                 <div className="card-footer d-flex justify-content-center">
-                  <button className="btn btn-success" onClick={() => handleClick(val._id)}>Explore Course</button>
+                  <button className="btn btn-success" onClick={() => handleClick(val._id)} style={{fontFamily: "'Century Gothic', sans-serif"}}>Explore Course</button>
                 </div>
               </div>
             </div>

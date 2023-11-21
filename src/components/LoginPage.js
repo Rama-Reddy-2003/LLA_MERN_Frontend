@@ -52,17 +52,17 @@ function LoginPage() {
 
   return (
     <div className="app ">
-      <div className="login-form ">
+      <div className="login-form " style={{fontFamily: "'Century Gothic', sans-serif",}}>
         <div className="title ">Sign In</div>
         <div className="button-container">
           <button
-            className={`col-6 btn  ${loginType === "user" ? "active btn-secondary" : ""}`}
+            className={`col-6 btn  ${loginType === "user" ? "active btn-info" : ""}`}
             onClick={() => setLoginType("user")}
           >
             User Login
           </button>
           <button
-            className={`col-6 btn  ${loginType === "admin" ? "active btn-secondary" : ""}`}
+            className={`col-6 btn  ${loginType === "admin" ? "active btn-info" : ""}`}
             onClick={() => setLoginType("admin")}
           >
             Admin Login
@@ -80,20 +80,20 @@ function LoginPage() {
                 
               /></div>
               <div className="input-container">
-              <label >password</label>
+              <label >Password</label>
               <input
                 type="password"
                 value={userpassword}
                 onChange={(e) => setuserpassword(e.target.value)}
                 
               />
-              <Link to="/NewUser" className="text-primary" style={{textDecoration:"none",textAlign:"center"}}><span>New User?? Click to Create Account</span></Link>
+              <Link to="/NewUser" className="text-primary" style={{textDecoration:"none",textAlign:"center"}}><span style={{color: "black"}}>Click here to create a new account.</span></Link>
               
               </div>
             </div>
           ) : (
             <div>
-              <div className="input-container">
+              <div className="input-container" style={{ width: 280 }}>
               <label >Admin Name</label>
               <input
                 type="text"
@@ -114,7 +114,7 @@ function LoginPage() {
           )}
         </div>
         <div className="button-container">
-          <button className="btn btn-secondary"  onClick={handleLogin}>
+          <button className="btn btn-info"  onClick={handleLogin}>
             Login
           </button>
         </div>
