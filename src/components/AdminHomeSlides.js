@@ -39,7 +39,7 @@ function AdminHomeSlide() {
                         <div className="col-md-6 col-lg-6 col-xl-4" key={val._id} style={{ marginBottom: "20px" }}>
                             <div className="card mt-5" style={{borderRadius:"12.5px",backgroundColor:"rgba(220,220,220,0.627)", maxHeight: "90vh", overflow: "hidden" }}>
                                 <div className="row justify-content-center">
-                                    <img src={val.image[0]} className="mt-3 card-img-top" alt="Loading" style={{height:"300px"}} />
+                                    <img src={val.image[0]} className="mt-3 card-img-top" alt="Loading" style={{height:"200px"}} />
                                 </div>
 
                                 <div className="card-body" style={{fontFamily: "'Century Gothic', sans-serif", fontWeight: "bold"}}>
